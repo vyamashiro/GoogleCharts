@@ -1,10 +1,12 @@
 google.charts.load('current', {'packages':['corechart']});
 
-google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
 google.charts.setOnLoadCallback(drawVisualization);
+google.charts.setOnLoadCallback(drawPieChart);
 
+//Combo Chart
 function drawVisualization() {
 
     var data = google.visualization.arrayToDataTable([
@@ -36,8 +38,30 @@ function drawVisualization() {
     chart.draw(data, options);
   }
 
-//Gráfico 1
-function drawChart() {
+//Pie Chart
+function drawPieChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Receita', 'Valor'],
+      ['Carro A', 8],
+      ['Carro B', 2],
+      ['Moto A', 2],
+      ['Moto B', 2]
+    ]);
+
+    var options = {
+      title: 'Receita (detalhamento)',
+      height: 300,
+      width: 500
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+}
+
+//Bar Chart 1
+function drawChart1() {
 
     var data = google.visualization.arrayToDataTable([
         ['Element', 'Value', { role: 'style' }, { role: 'annotation' } ],
@@ -54,11 +78,11 @@ function drawChart() {
                     'height':300,
                     legend: { position: "none" }};
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
     chart.draw(data, options);
 }
 
-//Gráfico 2
+//Bar Chart 2
 function drawChart2() {
 
     var data = google.visualization.arrayToDataTable([
@@ -80,7 +104,7 @@ function drawChart2() {
     chart.draw(data, options);
 }
 
-//Gráfico 3
+//Bar Chart 3
 function drawChart3() {
 
     var data = google.visualization.arrayToDataTable([
