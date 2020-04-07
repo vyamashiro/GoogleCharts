@@ -2,5 +2,5 @@
 <p>Dashboard contruído usando Google Charts Tools</p>
 
 <figure>
-    <img src="Dashboard.png">
+    <img src="dashboard.jpg">
 </figure>
