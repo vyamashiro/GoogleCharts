@@ -1,10 +1,11 @@
-google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages':['corechart', 'table']});
 
 google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
 google.charts.setOnLoadCallback(drawVisualization);
 google.charts.setOnLoadCallback(drawPieChart);
+google.charts.setOnLoadCallback(drawTable);
 
 //Combo Chart
 function drawVisualization() {
@@ -51,13 +52,34 @@ function drawPieChart() {
 
     var options = {
       title: 'Receita (detalhamento)',
-      height: 300,
-      width: 500
+      height: 250,
+      width: 450
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
+}
+
+//Table
+function drawTable() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Modelo');
+  data.addColumn('string', 'Categoria');
+  data.addColumn('number', 'Receita');
+  data.addColumn('number', 'Custos');
+  data.addColumn('number', 'Lucro bruto');
+  data.addColumn('boolean', 'Meta');
+  data.addRows([
+    ['Carro A','Linha A', {v: 10000, f: 'R$ 10.000'}, {v: -7000, f: '- R$ 7.000'}, {v: 3000, f: 'R$ 3.000' }, true],
+    ['Carro B','Linha B', {v:  8000, f: 'R$  8.000'}, {v: -8500, f: '- R$ 8.500'}, {v: -500, f: '- R$  500'}, false],
+    ['Moto  A','Linha A', {v: 12500, f: 'R$ 12.500'}, {v: -7500, f: '- R$ 7.500'}, {v: 5000, f: 'R$ 5.000' }, true],
+    ['Moto  B','Linha B', {v:  7000, f: 'R$  7.000'}, {v: -6000, f: '- R$ 6.000'}, {v: 1000, f: 'R$  1.000'}, false]
+  ]);
+
+  var table = new google.visualization.Table(document.getElementById('table_div'));
+
+  table.draw(data, {showRowNumber: true, width: 500, height: 250});
 }
 
 //Bar Chart 1

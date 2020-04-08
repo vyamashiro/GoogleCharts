@@ -2,6 +2,14 @@
     text-align: center;
 }
 
+.container-receita {
+    margin-bottom: 30px;
+}
+
+.container-receita2 {
+    vertical-align: middle;
+}
+
 div {
     display: inline-block;
 }

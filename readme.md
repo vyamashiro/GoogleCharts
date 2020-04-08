@@ -9,4 +9,4 @@
 Para ver no navegador baixe o repositório e abra o arquivo "index.html".
 
 <h2>:memo: Licença</h2>
-Distribuído sob a licença MIT. Veja <a href="license">LICENSE</a> para mais informações.
+Distribuído sob a licença MIT. Veja <a href="LICENSE">LICENSE</a> para mais informações.
