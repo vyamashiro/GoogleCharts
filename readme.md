@@ -1,8 +1,9 @@
 <h1>:bar_chart::chart_with_upwards_trend:Dashboard (em construção)</h1>
 <p>Dashboard contruída usando a biblioteca Google Charts Tools.</p>
+<p>Obs.: dados meramente ilustrativos.</p>
 <br>
 <figure>
-    <img src="dashboard.JPG">
+    <img style="display: block; margin-left: auto; margin-right: auto" src="dashboard.JPG">
 </figure>
 
 <h2>:computer: Como usar</h2>
