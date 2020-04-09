@@ -1,11 +1,19 @@
-.titulo {
-    font-family: Helvetica, sans-serif;
-    margin-bottom: 5px;
-    text-align: center;
+* {
+    background-image: none!important;
 }
 
 div {
     display: inline-block;
+}
+
+text {
+    font-size: 12px;
+}
+
+.titulo {
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .container {
@@ -16,7 +24,21 @@ div {
     margin-bottom: 25px;
 }
 
+.container-receita-detalhe {
+    width: 100%;
+}
+
 .container-receita2 {
-    
     vertical-align: middle;
+    
+}
+
+.google-visualization-table-tr-head {
+    background-color: #5e35b1!important;
+    color: white;
+}
+
+.container-despesas-custos {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
