@@ -1,11 +1,11 @@
 google.charts.load('current', {'packages':['corechart', 'table']});
 
-google.charts.setOnLoadCallback(drawChart1);
-google.charts.setOnLoadCallback(drawChart2);
-google.charts.setOnLoadCallback(drawChart3);
 google.charts.setOnLoadCallback(drawVisualization);
 google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawTable);
+google.charts.setOnLoadCallback(drawChart1);
+google.charts.setOnLoadCallback(drawChart2);
+google.charts.setOnLoadCallback(drawChart3);
 
 //Combo Chart
 function drawVisualization() {
@@ -30,14 +30,14 @@ function drawVisualization() {
       title : 'Receita, Custos e Despesas por Mês',
       seriesType: 'bars',
       series: {2: {type: 'line'}},
-      height: 300,
+      height: 250,
       width: 1200,
-      legend: {position: 'bottom'}
+      legend: {position: 'right'}
     };
 
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div0'));
     chart.draw(data, options);
-  }
+}
 
 //Pie Chart
 function drawPieChart() {
