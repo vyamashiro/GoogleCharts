@@ -1,8 +1,8 @@
 google.charts.load('current', {'packages':['corechart', 'table']});
 
-google.charts.setOnLoadCallback(drawVisualization);
-google.charts.setOnLoadCallback(drawPieChart);
+google.charts.setOnLoadCallback(drawVisualiation);
 google.charts.setOnLoadCallback(drawTable);
+google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
