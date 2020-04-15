@@ -1,11 +1,12 @@
-google.charts.load('current', {'packages':['corechart', 'table']});
+google.charts.load('current', {'packages':['corechart', 'table', 'gauge']});
 
-google.charts.setOnLoadCallback(drawVisualiation);
-google.charts.setOnLoadCallback(drawTable);
+google.charts.setOnLoadCallback(drawVisualization);
 google.charts.setOnLoadCallback(drawPieChart);
+google.charts.setOnLoadCallback(drawTable);
 google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
+google.charts.setOnLoadCallback(drawChartGauge1);
 
 //Combo Chart
 function drawVisualization() {
@@ -146,4 +147,25 @@ function drawChart3() {
 
     var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
     chart.draw(data, options);
+}
+
+//Gauge Chart 1
+function drawChartGauge1() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Label', 'Value'],
+    ['Receita', 80],
+    ['Custos', 55],
+    ['Despesas', 65],
+  ]);
+
+  var options = {
+    width: 400, height: 120,
+    redFrom: 90, redTo: 100,
+    yellowFrom:75, yellowTo: 90,
+    minorTicks: 4
+  };
+  
+  var chart = new google.visualization.Gauge(document.getElementById('chart_div_gauge'));
+  chart.draw(data, options);
 }

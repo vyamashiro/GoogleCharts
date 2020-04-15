@@ -42,3 +42,7 @@ text {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.container-speedometer {
+    vertical-align: middle;
+}
