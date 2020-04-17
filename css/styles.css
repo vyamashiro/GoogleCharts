@@ -45,4 +45,10 @@ text {
 
 .container-speedometer {
     vertical-align: middle;
+    margin-bottom: 50px;
+}
+
+tbody tr td div div {
+    margin-right: 20px;
+    margin-left: 20px;
 }

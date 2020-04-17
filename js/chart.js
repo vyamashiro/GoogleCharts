@@ -18,12 +18,12 @@ function drawVisualization() {
         ['Mar', 809, '809', 807, '807', 500],
         ['Abr', 569, '569', 608, '608', 372],
         ['Mai', 917, '917', 306, '306', 304],
-        ['Jun', 1298,'1298', 547, '547', 416],
+        ['Jun', 1200,'1200', 547, '547', 416],
         ['Jul', 780, '780', 849, '849', 402],
         ['Ago', 801, '801', 933, '933', 402],
         ['Set', 684, '684', 907, '907', 380],
         ['Out', 1071, '1071', 476, '476', 411],
-        ['Nov', 1284, '1284', 594, '594', 345],
+        ['Nov', 1184, '1184', 594, '594', 345],
         ['Dez', 1143, '1143', 902, '902', 483]
     ]);
 
@@ -46,8 +46,8 @@ function drawPieChart() {
     var data = google.visualization.arrayToDataTable([
       ['Receita', 'Valor'],
       ['Carro A', 8],
-      ['Carro B', 2],
-      ['Moto A', 2],
+      ['Carro B', 4],
+      ['Moto A', 3],
       ['Moto B', 2]
     ]);
 
@@ -87,7 +87,7 @@ function drawTable() {
 function drawChart1() {
 
     var data = google.visualization.arrayToDataTable([
-        ['Element', 'Value', { role: 'style' }, { role: 'annotation' } ],
+        ['Element', 'Valor', { role: 'style' }, { role: 'annotation' } ],
         ['Salário', 56.12, 'color: #01579b', '40.7%'],
         ['Impostos', 35.02, 'color: #01579b', '25.4%'],
         ['Transporte', 25.75, 'color: #01579b', '16.5%'],
@@ -109,7 +109,7 @@ function drawChart1() {
 function drawChart2() {
 
     var data = google.visualization.arrayToDataTable([
-    ['Element', 'Value', { role: 'style' }, { role: 'annotation' } ],
+    ['Element', 'Valor', { role: 'style' }, { role: 'annotation' } ],
     ['Insumos', 34.30, 'color: #4a148c', '23.9%'],
     ['Impostos', 30.44, 'color: #4a148c', '21.2%'],
     ['Manutenção', 27.75, 'color: #4a148c', '19.3%'],
@@ -131,7 +131,7 @@ function drawChart2() {
 function drawChart3() {
 
     var data = google.visualization.arrayToDataTable([
-        ['Element', 'Value', { role: 'style' }, { role: 'annotation' } ],
+        ['Element', 'Valor', { role: 'style' }, { role: 'annotation' } ],
         ['Salários', 36.40, 'color: #004d40', '31.9%'],
         ['Benefícios', 25.95, 'color: #004d40', '22.8%'],
         ['Impostos', 18.75, 'color: #004d40', '16.4%'],
@@ -153,14 +153,15 @@ function drawChart3() {
 function drawChartGauge1() {
 
   var data = google.visualization.arrayToDataTable([
-    ['Label', 'Value'],
+    ['Label', 'Valor'],
     ['Receita', 80],
-    ['Custos', 55],
+    ['Custo Fixo', 55],
+    ['Custo Var.', 65],
     ['Despesas', 65],
   ]);
 
   var options = {
-    width: 400, height: 120,
+    width: 600, height: 250,
     redFrom: 90, redTo: 100,
     yellowFrom:75, yellowTo: 90,
     minorTicks: 4
