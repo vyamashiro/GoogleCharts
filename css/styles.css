@@ -10,18 +10,30 @@ text {
     font-size: 12px;
 }
 
-.titulo {
-    font-family: Helvetica, sans-serif;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
 .container {
     text-align: center;
 }
 
+.titulo {
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container-speedometer {
+    vertical-align: middle;
+    margin-bottom: 70px;
+}
+
+tbody tr td div div {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
 .container-receita {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .container-receita-detalhe {
@@ -43,12 +55,3 @@ text {
     margin-bottom: 20px;
 }
 
-.container-speedometer {
-    vertical-align: middle;
-    margin-bottom: 50px;
-}
-
-tbody tr td div div {
-    margin-right: 20px;
-    margin-left: 20px;
-}
