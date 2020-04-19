@@ -46,11 +46,12 @@ tbody tr td div div {
 }
 
 .google-visualization-table-tr-head {
-    background-color: #607d8b!important;
+    background-color: #b0bec5!important;
     color: white;
 }
 
 .container-despesas-custos {
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 80px;
+    margin-top: 20px;
 }

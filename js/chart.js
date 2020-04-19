@@ -1,6 +1,6 @@
 google.charts.load('current', {'packages':['corechart', 'table', 'gauge']});
 
-google.charts.setOnLoadCallback(drawChartGauge1);
+google.charts.setOnLoadCallback(drawChartGauge);
 google.charts.setOnLoadCallback(drawVisualization);
 google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawTable);
@@ -9,7 +9,7 @@ google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
 
 //Gauge Chart 1
-function drawChartGauge1() {
+function drawChartGauge() {
 
   var data = google.visualization.arrayToDataTable([
     ['Label', 'Valor'],
@@ -43,10 +43,10 @@ function drawVisualization() {
         ['Jun', 1200,'1200', 'color: #2196f3', 547, '547', 'color: #f44336', 416],
         ['Jul', 780, '780', 'color: #2196f3', 849, '849', 'color: #f44336', 402],
         ['Ago', 801, '801', 'color: #2196f3', 933, '933', 'color: #f44336', 402],
-        ['Set', 684, '684', 'color: #0d47a1', 907, '907', 'color: #b71c1c', 380],
-        ['Out', 1071, '1071', 'color: #0d47a1', 476, '476', 'color: #b71c1c', 411],
-        ['Nov', 1184, '1184', 'color: #0d47a1', 594, '594', 'color: #b71c1c', 345],
-        ['Dez', 1143, '1143', 'color: #0d47a1', 902, '902', 'color: #b71c1c', 483]
+        ['Set', 684, '684', 'color: #69f0ae', 907, '907', 'color: #ff9800', 380],
+        ['Out', 1071, '1071', 'color: #69f0ae', 476, '476', 'color: #ff9800', 411],
+        ['Nov', 1184, '1184', 'color: #69f0ae', 594, '594', 'color: #ff9800', 345],
+        ['Dez', 1143, '1143', 'color: #69f0ae', 902, '902', 'color: #ff9800', 483]
     ]);
 
     var options = {
@@ -55,7 +55,8 @@ function drawVisualization() {
       series: {2: {type: 'line'}},
       height: 250,
       width: 1200,
-      legend: {position: 'right'}
+      legend: {position: 'bottom'},
+      colors: ['#2196f3', '#f44336','#e65100']
     };
 
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div0'));
