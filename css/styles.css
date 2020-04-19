@@ -40,6 +40,11 @@ tbody tr td div div {
     width: 100%;
 }
 
+.google-visualization-table-table {
+    font-family: Helvetica, sans-serif!important;
+    font-size: 12px!important;
+}
+
 .container-receita2 {
     vertical-align: middle;
     

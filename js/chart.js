@@ -8,7 +8,7 @@ google.charts.setOnLoadCallback(drawChart1);
 google.charts.setOnLoadCallback(drawChart2);
 google.charts.setOnLoadCallback(drawChart3);
 
-//Gauge Chart 1
+//Gauge Chart 1 **ajustar alinhamento**
 function drawChartGauge() {
 
   var data = google.visualization.arrayToDataTable([
@@ -21,8 +21,11 @@ function drawChartGauge() {
 
   var options = {
     width: 600, height: 250,
+    // greenFrom: 0, greenTo: 75,
+    yellowFrom: 75, yellowTo: 90,
+    yellowColor: '#ffee58',
     redFrom: 90, redTo: 100,
-    yellowFrom:75, yellowTo: 90,
+    redColor: '#f44336',
     minorTicks: 4
   };
   
@@ -30,7 +33,7 @@ function drawChartGauge() {
   chart.draw(data, options);
 }
 
-//Combo Chart
+//Combo Chart **ajustar alinhamento**
 function drawVisualization() {
 
     var data = google.visualization.arrayToDataTable([
@@ -50,12 +53,14 @@ function drawVisualization() {
     ]);
 
     var options = {
-      title : 'Receita, Custos e Despesas por Mês',
+      title: 'Receita, Custos e Despesas por Mês',
       seriesType: 'bars',
       series: {2: {type: 'line'}},
       height: 250,
       width: 1200,
       legend: {position: 'bottom'},
+      fontSize: 12,
+      fontName:'Helvetica, sans-serif',
       colors: ['#2196f3', '#f44336','#e65100']
     };
 
@@ -63,7 +68,7 @@ function drawVisualization() {
     chart.draw(data, options);
 }
 
-//Pie Chart
+//Pie Chart **ajustar alinhamento**
 function drawPieChart() {
 
     var data = google.visualization.arrayToDataTable([
@@ -71,13 +76,21 @@ function drawPieChart() {
       ['Carro A', 8],
       ['Carro B', 4],
       ['Moto A', 3],
-      ['Moto B', 2]
+      ['Moto B', 3]
     ]);
 
     var options = {
       title: 'Receita (detalhamento)',
+      fontSize: 12,
+      fontName:'Helvetica, sans-serif',
       height: 250,
-      width: 450
+      width: 450,
+      slices: {
+        0: { color: '#00796b' },
+        1: { color: '#009688' },
+        2: { color: '#4db6ac' },
+        3: { color: '#b2dfdb' }
+      }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -85,7 +98,7 @@ function drawPieChart() {
     chart.draw(data, options);
 }
 
-//Table
+//Table **ajustar alinhamento**
 function drawTable() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Modelo');
@@ -120,6 +133,8 @@ function drawChart1() {
     ]);
 
     var options = {'title':'Custos Fixos (Top 5)',
+                    fontSize: 12,
+                    fontName:'Helvetica, sans-serif',
                     'width':400,
                     'height':300,
                     legend: { position: "none" }};
@@ -142,6 +157,8 @@ function drawChart2() {
     ]);
 
     var options = {'title':'Custos Variáveis (Top 5)',
+                    fontSize: 12,
+                    fontName:'Helvetica, sans-serif',
                     'width':400,
                     'height':300,
                     legend: { position: "none" }};
@@ -164,6 +181,8 @@ function drawChart3() {
     ]);
 
     var options = {'title':'Despesas (Top 5)',
+                    fontSize: 12,
+                    fontName:'Helvetica, sans-serif',
                     'width':400,
                     'height':300,
                     legend: { position: "none" }};
