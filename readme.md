@@ -3,8 +3,8 @@
 <p>Obs.: dados meramente ilustrativos.</p>
 <br>
 <figure>
-    <img style="display: block; margin-left: auto; margin-right: auto" src="dashboard1.JPG">
-    <img style="display: block; margin-left: auto; margin-right: auto" src="dashboard2.JPG">
+    <img src="dashboard1.jpg">
+    <img src="dashboard2.jpg">
 </figure>
 
 <h2>:computer: Como usar</h2>
