@@ -11,7 +11,7 @@ google.charts.setOnLoadCallback(drawChart3);
 //Gauge Chart 1 **ajustar alinhamento**
 function drawChartGauge() {
 
-  var data = google.visualization.arrayToDataTable([
+  const data = google.visualization.arrayToDataTable([
     ['Label', 'Valor'],
     ['Receita', 80],
     ['Custo Fixo', 55],
@@ -19,7 +19,7 @@ function drawChartGauge() {
     ['Despesas', 65],
   ]);
 
-  var options = {
+  const options = {
     width: 600, height: 250,
     // greenFrom: 0, greenTo: 75,
     yellowFrom: 75, yellowTo: 90,
@@ -29,14 +29,14 @@ function drawChartGauge() {
     minorTicks: 4
   };
   
-  var chart = new google.visualization.Gauge(document.getElementById('chart_div_gauge'));
+  const chart = new google.visualization.Gauge(document.getElementById('chart_div_gauge'));
   chart.draw(data, options);
 }
 
 //Combo Chart **ajustar alinhamento**
 function drawVisualization() {
 
-    var data = google.visualization.arrayToDataTable([
+    const data = google.visualization.arrayToDataTable([
         ['Mês', 'Receita', { role: 'annotation' }, { role: 'style' }, 'Custos', { role: 'annotation' }, { role: 'style' }, 'Despesas'],
         ['Jan', 943, '943', 'color: #2196f3', 410, '410', 'color: #f44336', 333],
         ['Fev', 772, '772', 'color: #2196f3', 301, '301', 'color: #f44336', 359],
@@ -52,7 +52,7 @@ function drawVisualization() {
         ['Dez', 1143, '1143', 'color: #69f0ae', 902, '902', 'color: #ff9800', 483]
     ]);
 
-    var options = {
+    const options = {
       title: 'Receita, Custos e Despesas por Mês',
       seriesType: 'bars',
       series: {2: {type: 'line'}},
@@ -64,14 +64,14 @@ function drawVisualization() {
       colors: ['#2196f3', '#f44336','#e65100']
     };
 
-    var chart = new google.visualization.ComboChart(document.getElementById('chart_div0'));
+    const chart = new google.visualization.ComboChart(document.getElementById('chart_div0'));
     chart.draw(data, options);
 }
 
 //Pie Chart **ajustar alinhamento**
 function drawPieChart() {
 
-    var data = google.visualization.arrayToDataTable([
+    const data = google.visualization.arrayToDataTable([
       ['Receita', 'Valor'],
       ['Carro A', 8],
       ['Carro B', 4],
@@ -79,7 +79,7 @@ function drawPieChart() {
       ['Moto B', 3]
     ]);
 
-    var options = {
+    const options = {
       title: 'Receita (detalhamento)',
       fontSize: 12,
       fontName:'Helvetica, sans-serif',
@@ -93,14 +93,14 @@ function drawPieChart() {
       }
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    const chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
 }
 
 //Table **ajustar alinhamento**
 function drawTable() {
-  var data = new google.visualization.DataTable();
+  const data = new google.visualization.DataTable();
   data.addColumn('string', 'Modelo');
   data.addColumn('string', 'Categoria');
   data.addColumn('number', 'Receita');
@@ -114,7 +114,7 @@ function drawTable() {
     ['Moto  B','Linha B', {v:  7000, f: 'R$  7.000'}, {v: -6000, f: '- R$ 6.000'}, {v: 1000, f: 'R$  1.000'}, false]
   ]);
 
-  var table = new google.visualization.Table(document.getElementById('table_div'));
+  const table = new google.visualization.Table(document.getElementById('table_div'));
 
   table.draw(data, {showRowNumber: true, width: 500, height: 250});
 }
@@ -122,7 +122,7 @@ function drawTable() {
 //Bar Chart 1
 function drawChart1() {
 
-    var data = google.visualization.arrayToDataTable([
+    const data = google.visualization.arrayToDataTable([
         ['Element', 'Valor', { role: 'style' }, { role: 'annotation' } ],
         ['Salário', 56.12, 'color: #2196f3', '40.7%'],
         ['Impostos', 35.02, 'color: #2196f3', '25.4%'],
@@ -132,21 +132,21 @@ function drawChart1() {
         ['Outros', 15.37, 'color: #2196f3', '11.1%']
     ]);
 
-    var options = {'title':'Custos Fixos (Top 5)',
+    const options = {'title':'Custos Fixos (Top 5)',
                     fontSize: 12,
                     fontName:'Helvetica, sans-serif',
                     'width':400,
                     'height':300,
                     legend: { position: "none" }};
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
+    const chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
     chart.draw(data, options);
 }
 
 //Bar Chart 2
 function drawChart2() {
 
-    var data = google.visualization.arrayToDataTable([
+    const data = google.visualization.arrayToDataTable([
     ['Element', 'Valor', { role: 'style' }, { role: 'annotation' } ],
     ['Insumos', 34.30, 'color: #f44336', '23.9%'],
     ['Impostos', 30.44, 'color: #f44336', '21.2%'],
@@ -156,21 +156,21 @@ function drawChart2() {
     ['Outros', 15.10, 'color: #f44336', '10.5%']
     ]);
 
-    var options = {'title':'Custos Variáveis (Top 5)',
+    const options = {'title':'Custos Variáveis (Top 5)',
                     fontSize: 12,
                     fontName:'Helvetica, sans-serif',
                     'width':400,
                     'height':300,
                     legend: { position: "none" }};
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
+    const chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
     chart.draw(data, options);
 }
 
 //Bar Chart 3
 function drawChart3() {
 
-    var data = google.visualization.arrayToDataTable([
+    const data = google.visualization.arrayToDataTable([
         ['Element', 'Valor', { role: 'style' }, { role: 'annotation' } ],
         ['Salários', 36.40, 'color: #009688', '31.9%'],
         ['Benefícios', 25.95, 'color: #009688', '22.8%'],
@@ -180,14 +180,14 @@ function drawChart3() {
         ['Outros', 6.10, 'color: #009688', '5.4%']
     ]);
 
-    var options = {'title':'Despesas (Top 5)',
+    const options = {'title':'Despesas (Top 5)',
                     fontSize: 12,
                     fontName:'Helvetica, sans-serif',
                     'width':400,
                     'height':300,
                     legend: { position: "none" }};
 
-    var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
+    const chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
     chart.draw(data, options);
 }
 
